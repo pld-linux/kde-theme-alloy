@@ -5,7 +5,7 @@ Summary:	KDE theme - %{_name}
 Summary(pl):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	0.5.1
-Release:	1
+Release:	2
 License:	X11
 Group:		Themes
 Source0:	http://kde-look.org/content/files/10605-%{_name}-%{version}.tar.bz2
@@ -13,10 +13,10 @@ Source0:	http://kde-look.org/content/files/10605-%{_name}-%{version}.tar.bz2
 Patch0:		%{_name}-c++.patch
 URL:		http://www.kde-look.org/content/show.php?content=2306
 BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	freetype-devel
-BuildRequires:	kdelibs-devel
 BuildRequires:	unsermake
+BuildRequires:	automake
+BuildRequires:	kdelibs-devel >= 9:3.2.0
+BuildRequires:	kdebase-desktop-libs >= 9:3.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -68,7 +68,7 @@ niebieskimi kolorami pod¶wietlonych elementów menu i tytu³u okna.
 Summary:	Kwin decoration - %{_name}
 Summary(pl):	Dekoracja kwin - %{_name}
 Group:		Themes
-Requires:	kdebase-desktop-libs
+Requires:	kdebase-desktop-libs >= 9:3.2.0
 
 %description -n kde-decoration-%{_name}
 This package contains a kwin decoration with solid background and
@@ -84,13 +84,12 @@ widocznymi przyciskami.
 %patch0 -p1
 
 %build
-kde_htmldir="%{_kdedocdir}"; export kde_htmldir
-kde_icondir="%{_iconsdir}"; export kde_icondir
-cp -f /usr/share/automake/config.sub admin
+cp -f %{_datadir}/automake/config.sub admin
 export UNSERMAKE=%{_datadir}/unsermake/unsermake
 %{__make} -f Makefile.dist
 
-%configure
+%configure \
+	--with-qt-libraries=%{_libdir}
 
 %{__make}
 
@@ -98,7 +97,8 @@ export UNSERMAKE=%{_datadir}/unsermake/unsermake
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	kde_htmldir="%{_kdedocdir}"
 
 %clean
 rm -rf $RPM_BUILD_ROOT
