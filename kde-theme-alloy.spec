@@ -13,11 +13,10 @@ Source0:	http://kde-look.org/content/files/10605-%{_name}-%{version}.tar.bz2
 Patch0:		%{_name}-c++.patch
 URL:		http://www.kde-look.org/content/show.php?content=2306
 BuildRequires:	autoconf
-BuildRequires:	unsermake
+BuildRequires:	automake
 BuildRequires:	freetype-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	unsermake
-Requires:	kdelibs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,7 +28,7 @@ transparent, visible buttons.
 
 %description -l pl
 Alloy to kopia stylu o tej samej nazwie stosowanego w aplikacjach
-napisanych w javie. Oferuje zaokr±glone, lekkie elementy interfejsu o
+napisanych w Javie. Oferuje zaokr±glone, lekkie elementy interfejsu o
 subtelnej wypuk³o¶ci. Ten pakiet zawiera schemat kolorów ³±cz±cy ¿ó³ty
 wygl±d aplikacji z niebieskimi kolorami pod¶wietlonych elementów menu
 i tytu³u okna. Ten pakiet zawiera tak¿e dekoracje kwin
@@ -46,10 +45,9 @@ Requires:	kdelibs
 Alloy is a java alloy clone. It features rounded, lightweight and
 mildly convex widgets.
 
-
 %description -n kde-style-%{_name} -l pl
 Alloy to kopia stylu o tej samej nazwie stosowanego w aplikacjach
-napisanych w javie. Oferuje zaokr±glone, lekkie elementy interfejsu o
+napisanych w Javie. Oferuje zaokr±glone, lekkie elementy interfejsu o
 subtelnej wypuk³o¶ci.
 
 %package -n kde-colorscheme-%{_name}
@@ -81,8 +79,6 @@ Ten pakiet zawiera dekoracje kwin charakteryzuj±c± siê sta³ym (zale¿ny
 od schematu kolorów) kolorem t³a i brzegów okna oraz prze¼roczystymi
 widocznymi przyciskami.
 
-
-
 %prep
 %setup -q -n %{_name}-%{version}
 %patch0 -p1
@@ -90,7 +86,7 @@ widocznymi przyciskami.
 %build
 kde_htmldir="%{_kdedocdir}"; export kde_htmldir
 kde_icondir="%{_iconsdir}"; export kde_icondir
-cp -f %{_datadir}/automake/config.sub admin
+cp -f /usr/share/automake/config.sub admin
 export UNSERMAKE=%{_datadir}/unsermake/unsermake
 %{__make} -f Makefile.dist
 
@@ -100,8 +96,6 @@ export UNSERMAKE=%{_datadir}/unsermake/unsermake
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create dirs if necessary
-#install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
