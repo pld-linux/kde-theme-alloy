@@ -4,12 +4,12 @@
 Summary:	KDE theme - %{_name}
 Summary(pl):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
-Version:	0.5.1
+Version:	0.5.2
 Release:	2
 License:	X11
 Group:		Themes
 Source0:	http://kde-look.org/content/files/10605-%{_name}-%{version}.tar.bz2
-# Source0-md5:	00fce4a927f01097637dc8ab85452e92
+# Source0-md5:	cbf479f1145ebdd0f54b055cf8d42788
 Patch0:		%{_name}-c++.patch
 URL:		http://www.kde-look.org/content/show.php?content=2306
 BuildRequires:	autoconf
@@ -98,7 +98,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	kde_htmldir="%{_kdedocdir}"
+	kde_htmldir="%{_kdedocdir}" \
+	kde_libs_htmldir="%{_kdedocdir}"
 
 %clean
 rm -rf $RPM_BUILD_ROOT
