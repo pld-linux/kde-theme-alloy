@@ -1,0 +1,8 @@
+--- alloy-0.5.1/alloystyle/alloystyleplugin.cpp.orig	2004-05-22 19:04:55.356360880 +0200
++++ alloy-0.5.1/alloystyle/alloystyleplugin.cpp	2004-05-22 19:05:16.388163560 +0200
+@@ -41,4 +41,4 @@
+     return 0;
+ }
+ 
+-Q_EXPORT_PLUGIN(AlloyStylePlugin);
++Q_EXPORT_PLUGIN(AlloyStylePlugin)
