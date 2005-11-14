@@ -36,7 +36,7 @@ subtelnej wypuk³o¶ci. Ten pakiet zawiera schemat kolorów ³±cz±cy ¿ó³ty
 wygl±d aplikacji z niebieskimi kolorami pod¶wietlonych elementów menu
 i tytu³u okna. Ten pakiet zawiera tak¿e dekoracje kwin
 charakteryzuj±c± siê sta³ym (zale¿ny od schematu kolorów) kolorem t³a
-i brzegów okna oraz prze¼roczystymi widocznymi przyciskami.
+i brzegów okna oraz przezroczystymi widocznymi przyciskami.
 
 %package -n kde-style-%{_name}
 Summary:	KDE style - %{_name}
@@ -79,7 +79,7 @@ outlines and transparent, visible buttons.
 
 %description -n kde-decoration-%{_name} -l pl
 Ten pakiet zawiera dekoracje kwin charakteryzuj±c± siê sta³ym (zale¿ny
-od schematu kolorów) kolorem t³a i brzegów okna oraz prze¼roczystymi
+od schematu kolorów) kolorem t³a i brzegów okna oraz przezroczystymi
 widocznymi przyciskami.
 
 %prep
