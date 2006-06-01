@@ -4,19 +4,15 @@
 Summary:	KDE theme - %{_name}
 Summary(pl):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
-Version:	0.5.2
-Release:	3
+Version:	0.5.3
+Release:	1
 License:	X11
 Group:		Themes
-Source0:	http://kde-look.org/content/files/10605-%{_name}-%{version}.tar.bz2
-# Source0-md5:	cbf479f1145ebdd0f54b055cf8d42788
+Source0:	http://www.kde-look.org/content/files/10605-%{_name}-%{version}.tar.bz2
+# Source0-md5:	4c84f744ba0eeda89436e1c671e18c85
 Patch0:		%{_name}-c++.patch
-URL:		http://www.kde-look.org/content/show.php?content=2306
-BuildRequires:	autoconf
-BuildRequires:	unsermake
-BuildRequires:	automake
-BuildRequires:	kdelibs-devel >= 9:3.2.0
-BuildRequires:	kdebase-desktop-libs >= 9:3.2.0
+URL:		http://www.kde-look.org/content/show.php?content=10605
+BuildRequires:	kdebase-devel >= 9:3.2.0
 Requires:	kde-decoration-%{_name}
 Requires:	kde-style-%{_name}
 Requires:	kde-colorscheme-%{_name}
@@ -71,7 +67,7 @@ niebieskimi kolorami pod¶wietlonych elementów menu i tytu³u okna.
 Summary:	Kwin decoration - %{_name}
 Summary(pl):	Dekoracja kwin - %{_name}
 Group:		Themes
-Requires:	kdebase-desktop-libs >= 9:3.2.0
+Requires:	kdebase-desktop
 
 %description -n kde-decoration-%{_name}
 This package contains a kwin decoration with solid background and
@@ -84,13 +80,8 @@ widocznymi przyciskami.
 
 %prep
 %setup -q -n %{_name}-%{version}
-%patch0 -p1
 
 %build
-cp -f %{_datadir}/automake/config.sub admin
-export UNSERMAKE=%{_datadir}/unsermake/unsermake
-%{__make} -f Makefile.dist
-
 %configure \
 	--with-qt-libraries=%{_libdir}
 
@@ -108,6 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %files
+%doc AUTHORS ChangeLog README TODO
 
 %files -n kde-decoration-%{_name}
 %defattr(644,root,root,755)
@@ -117,8 +109,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n kde-style-%{_name}
 %defattr(644,root,root,755)
-##%{_libdir}/kde3/kstyle_*.la
-##%attr(755,root,root) %{_libdir}/kde3/kstyle_*.so
 %{_libdir}/kde3/plugins/styles/*.la
 %attr(755,root,root) %{_libdir}/kde3/plugins/styles/*.so
 %{_datadir}/apps/kstyle/themes/*.themerc
