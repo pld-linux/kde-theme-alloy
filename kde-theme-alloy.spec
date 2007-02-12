@@ -2,7 +2,7 @@
 %define		_name	alloy
 
 Summary:	KDE theme - %{_name}
-Summary(pl):	Motyw KDE - %{_name}
+Summary(pl.UTF-8):   Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	0.5.3
 Release:	1
@@ -25,18 +25,18 @@ which combines a yellow look with blue highlight colors. This package
 also contains a kwin decoration with solid background and outlines and
 transparent, visible buttons.
 
-%description -l pl
+%description -l pl.UTF-8
 Alloy to kopia stylu o tej samej nazwie stosowanego w aplikacjach
-napisanych w Javie. Oferuje zaokr±glone, lekkie elementy interfejsu o
-subtelnej wypuk³o¶ci. Ten pakiet zawiera schemat kolorów ³±cz±cy ¿ó³ty
-wygl±d aplikacji z niebieskimi kolorami pod¶wietlonych elementów menu
-i tytu³u okna. Ten pakiet zawiera tak¿e dekoracje kwin
-charakteryzuj±c± siê sta³ym (zale¿ny od schematu kolorów) kolorem t³a
-i brzegów okna oraz przezroczystymi widocznymi przyciskami.
+napisanych w Javie. Oferuje zaokrÄ…glone, lekkie elementy interfejsu o
+subtelnej wypukÅ‚oÅ›ci. Ten pakiet zawiera schemat kolorÃ³w Å‚Ä…czÄ…cy Å¼Ã³Å‚ty
+wyglÄ…d aplikacji z niebieskimi kolorami podÅ›wietlonych elementÃ³w menu
+i tytuÅ‚u okna. Ten pakiet zawiera takÅ¼e dekoracje kwin
+charakteryzujÄ…cÄ… siÄ™ staÅ‚ym (zaleÅ¼ny od schematu kolorÃ³w) kolorem tÅ‚a
+i brzegÃ³w okna oraz przezroczystymi widocznymi przyciskami.
 
 %package -n kde-style-%{_name}
 Summary:	KDE style - %{_name}
-Summary(pl):	Styl do KDE - %{_name}
+Summary(pl.UTF-8):   Styl do KDE - %{_name}
 Group:		Themes
 Requires:	kdelibs
 
@@ -44,14 +44,14 @@ Requires:	kdelibs
 Alloy is a java alloy clone. It features rounded, lightweight and
 mildly convex widgets.
 
-%description -n kde-style-%{_name} -l pl
+%description -n kde-style-%{_name} -l pl.UTF-8
 Alloy to kopia stylu o tej samej nazwie stosowanego w aplikacjach
-napisanych w Javie. Oferuje zaokr±glone, lekkie elementy interfejsu o
-subtelnej wypuk³o¶ci.
+napisanych w Javie. Oferuje zaokrÄ…glone, lekkie elementy interfejsu o
+subtelnej wypukÅ‚oÅ›ci.
 
 %package -n kde-colorscheme-%{_name}
 Summary:	Color scheme for KDE style - %{_name}
-Summary(pl):	Schemat kolorów do stylu KDE - %{_name}
+Summary(pl.UTF-8):   Schemat kolorÃ³w do stylu KDE - %{_name}
 Group:		Themes
 Requires:	kdebase-core
 
@@ -59,13 +59,13 @@ Requires:	kdebase-core
 This package contains an alloy color scheme which combines a yellow
 look with blue highlight colors.
 
-%description -n kde-colorscheme-%{_name} -l pl
-Ten pakiet zawiera schemat kolorów ³±cz±cy ¿ó³ty wygl±d aplikacji z
-niebieskimi kolorami pod¶wietlonych elementów menu i tytu³u okna.
+%description -n kde-colorscheme-%{_name} -l pl.UTF-8
+Ten pakiet zawiera schemat kolorÃ³w Å‚Ä…czÄ…cy Å¼Ã³Å‚ty wyglÄ…d aplikacji z
+niebieskimi kolorami podÅ›wietlonych elementÃ³w menu i tytuÅ‚u okna.
 
 %package -n kde-decoration-%{_name}
 Summary:	Kwin decoration - %{_name}
-Summary(pl):	Dekoracja kwin - %{_name}
+Summary(pl.UTF-8):   Dekoracja kwin - %{_name}
 Group:		Themes
 Requires:	kdebase-desktop
 
@@ -73,9 +73,9 @@ Requires:	kdebase-desktop
 This package contains a kwin decoration with solid background and
 outlines and transparent, visible buttons.
 
-%description -n kde-decoration-%{_name} -l pl
-Ten pakiet zawiera dekoracje kwin charakteryzuj±c± siê sta³ym (zale¿ny
-od schematu kolorów) kolorem t³a i brzegów okna oraz przezroczystymi
+%description -n kde-decoration-%{_name} -l pl.UTF-8
+Ten pakiet zawiera dekoracje kwin charakteryzujÄ…cÄ… siÄ™ staÅ‚ym (zaleÅ¼ny
+od schematu kolorÃ³w) kolorem tÅ‚a i brzegÃ³w okna oraz przezroczystymi
 widocznymi przyciskami.
 
 %prep
