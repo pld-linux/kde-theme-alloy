@@ -2,7 +2,7 @@
 %define		_name	alloy
 
 Summary:	KDE theme - %{_name}
-Summary(pl.UTF-8):   Motyw KDE - %{_name}
+Summary(pl.UTF-8):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	0.5.3
 Release:	1
@@ -36,7 +36,7 @@ i brzegów okna oraz przezroczystymi widocznymi przyciskami.
 
 %package -n kde-style-%{_name}
 Summary:	KDE style - %{_name}
-Summary(pl.UTF-8):   Styl do KDE - %{_name}
+Summary(pl.UTF-8):	Styl do KDE - %{_name}
 Group:		Themes
 Requires:	kdelibs
 
@@ -51,7 +51,7 @@ subtelnej wypukłości.
 
 %package -n kde-colorscheme-%{_name}
 Summary:	Color scheme for KDE style - %{_name}
-Summary(pl.UTF-8):   Schemat kolorów do stylu KDE - %{_name}
+Summary(pl.UTF-8):	Schemat kolorów do stylu KDE - %{_name}
 Group:		Themes
 Requires:	kdebase-core
 
@@ -65,7 +65,7 @@ niebieskimi kolorami podświetlonych elementów menu i tytułu okna.
 
 %package -n kde-decoration-%{_name}
 Summary:	Kwin decoration - %{_name}
-Summary(pl.UTF-8):   Dekoracja kwin - %{_name}
+Summary(pl.UTF-8):	Dekoracja kwin - %{_name}
 Group:		Themes
 Requires:	kdebase-desktop
 
