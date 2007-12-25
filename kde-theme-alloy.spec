@@ -10,7 +10,6 @@ License:	X11
 Group:		Themes
 Source0:	http://www.kde-look.org/content/files/10605-%{_name}-%{version}.tar.bz2
 # Source0-md5:	4c84f744ba0eeda89436e1c671e18c85
-Patch0:		%{_name}-c++.patch
 URL:		http://www.kde-look.org/content/show.php?content=10605
 BuildRequires:	kdebase-devel >= 9:3.2.0
 Requires:	kde-decoration-%{_name}
