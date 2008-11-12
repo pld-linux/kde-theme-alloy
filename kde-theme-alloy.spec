@@ -5,7 +5,7 @@ Summary:	KDE theme - %{_name}
 Summary(pl.UTF-8):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	0.5.3
-Release:	3
+Release:	4
 License:	X11
 Group:		Themes
 Source0:	http://www.kde-look.org/content/files/10605-%{_name}-%{version}.tar.bz2
